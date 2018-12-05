@@ -25,7 +25,7 @@ class Api::V1::StoriesController < ApplicationController
     end
 
     def story_params
-        params.permit(:title, :image, :text, :library_id)
+        params.permit(:title, :image, :text)
     end
     
     def define_current_story

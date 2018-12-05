@@ -16,7 +16,7 @@ class Api::V1::StoriesController < ApplicationController
     
     def destroy
         current_story.destroy
-        render json: story
+        render json: Story.all
     end
     
     def create

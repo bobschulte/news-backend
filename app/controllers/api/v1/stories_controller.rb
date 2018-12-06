@@ -2,7 +2,7 @@ class Api::V1::StoriesController < ApplicationController
     before_action :define_current_story
 
     def index
-        render json: Story.all
+        render json: Story.all, include: [:comments]
     end
 
     def show
@@ -25,7 +25,7 @@ class Api::V1::StoriesController < ApplicationController
     end
 
     def story_params
-        params.permit(:title, :urlToImage, :content, :url)
+        params.permit(:title, :urlToImage, :content, :url, comments_attributes: [ [ :id, :description ] ])
     end
 
     def define_current_story

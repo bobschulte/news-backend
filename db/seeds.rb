@@ -11,7 +11,7 @@ Comment.destroy_all
 Story.destroy_all
 
 
-story1 = Story.create(title: 'The Red Moon', image: 'https://douglaswood.com/wp-content/uploads/2017/03/Rabbit-and-the-Moon-Douglas-Wood_cover.jpg', text: 'The Rabbit And The Moon')
+story1 = Story.create(title: 'The Red Moon', urlToImage: 'https://douglaswood.com/wp-content/uploads/2017/03/Rabbit-and-the-Moon-Douglas-Wood_cover.jpg', content: 'The Rabbit And The Moon')
 
 comment1 = Comment.create(description: 'This is my first comment', story_id: story1.id)
 comment2 = Comment.create(description: 'We need a name for our app', story_id: story1.id)
